@@ -1,0 +1,110 @@
+<script type="text/javascript">
+var rev = "fwd";
+function titlebar(val)
+{
+var msg = "Welcome to";
+var res = " ";
+var speed = 120;
+var pos = val;
+msg = "Welcome to";
+var le = msg.length;
+if(rev == "fwd"){
+if(pos < le){
+pos = pos+1;
+scroll = msg.substr(0,pos);
+document.title = scroll;
+timer = window.setTimeout("titlebar("+pos+")",speed);}
+else{
+rev = "bwd";
+timer = window.setTimeout("titlebar("+pos+")",speed);}}
+else{
+if(pos > 0){
+pos = pos-1;
+var ale = le-pos;
+scrol = msg.substr(ale,le);
+document.title = scrol;
+timer = window.setTimeout("titlebar("+pos+")",speed);}
+else{
+rev = "fwd";
+timer = window.setTimeout("titlebar("+pos+")",speed);
+}}}
+titlebar(0);
+</script>
+
+<style> html, body, a, a:hover { cursor:url('http://www.snazzyspace.com/cursorsfolder/cookie.png'), auto !important; }</style>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+    height: 500px; 
+}
+
+.left, .right {
+  width: 20%;
+}
+
+.middle {
+  width: 60%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+</head>
+<body>
+
+<h2><center>Welcome</h2>
+
+<div class="row">
+  <div class="column left" style="background-color:#b3d9ff;">
+    <h2></h2>
+    <p><div class="nav">
+  <div class="container">
+    <ul class="pull-left">
+      <li><a href="jiayinzhu.html">Home</a></li>
+      <li><a href="hobby.html">Hobbies</a></li>
+      <li><a href="Work.html">Work</a></li>
+	<li><a href="https://www.youtube.com/">Youtube</a></li>
+    </ul>
+  </div>
+</div></p>
+  </div>
+  <div class="column middle" style="background-color:#cce6ff;">
+    <h2>Home</h2>
+    <p>Jia Yin Zhu</p>
+<p>Baruch College</p>
+<p>New York</p>
+<p>Address: 123 Sesame Street New York, NY 1111</p>
+<p>Email: cookiemonster@gmail.com</p>
+<p> You can also find me on <a href="http://www.yahoo.com">here</a> </p>.
+  </div>
+<h2>  
+</h2>
+  <div class="column right" style="background-color:#e6f2ff;">
+    <br>
+	<img src="/users/jiayinzhu/Documents/images.jpg">
+</br>
+
+  </div>
+</div>
+
+
+</body>
+</html>
+
+
